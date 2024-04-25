@@ -26,6 +26,8 @@
     --ff-Young: 'Young Serif', sans-serif;
 
     --fs-body: 1.6rem;
+    --fs-h1: clamp(3rem, 4vw, 3.5rem);;
+    --fs-h2: clamp(2rem, 4vw, 2.8rem);
     --fw-400: 400;
     --fw-600: 600;
     --fw-700: 700;
@@ -48,6 +50,7 @@ body {
     font-size: var(--fs-body, 16px);
     font-family: var(--ff-Outfit, 'Arial');
     color: var(--clr-WengeBrown, #222);
+    font-weight: var(--fw-400, 400);
     background-color: var(--clr-Eggshell, #f3e6d8);
     line-height: 1.5;
     margin: 0;
@@ -78,12 +81,13 @@ img {
     background: var(--clr-White, #fff);
     width: auto;
     height: auto;
+    padding: 4rem;
     max-width: 70rem;
-    padding: 5rem;
     border-radius: 1.5rem;
-    margin: 8rem;
+    margin-block: 10rem;
     overflow: hidden;
 }
+
 
 .card__image {
     height: 100%;
@@ -94,13 +98,96 @@ img {
 
 .card__heading {
     font-family: var(--ff-Young, Serif);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: var(--fs-h1);
     padding-block: 1rem;
+    color: var(--clr-DarkCharcoal, #302D2C);
+}
+
+.card__preparation {
+    background-color: var(--clr-RoseWhite, #fff5FA);
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+
+.card__subheading_pink {
+    font-size: 1.8rem;
+    color: var(--clr-DarkRaspberry, #F26C6C);
+}
+
+.is-bold {
+    font-weight: var(--fw-600, 600);
 }
 
 
+.card__list {
+    padding-left: 2.5rem;
+}
 
-@media only screen and (min-width: 375px) {
-    
+.card__list li {
+    padding-left: 2rem;
+    margin-block: 1rem;
+}
+
+.card__preparation .card__list li::marker {
+    color: var(--clr-DarkRaspberry, #F26C6C);
+}
+
+.card__list li::marker {
+    color: var(--clr-Nutmeg, #854632);
+    font-weight: var(--fw-600, 600);
+}
+.card__subheading {
+    font-family: var(--ff-Young, Serif);
+    font-weight: var(--fw-400, 400);
+    font-size: var(--fs-h2);
+    color: var(--clr-Nutmeg, #854632);
+    padding-bottom: 1rem;
+}
+
+.card__igredients, .card__instructions {
+    border-bottom: 1px solid var(--clr-LightGrey);
+}
+
+.card__igredients, .card__instructions, .card__nutrition{
+    padding-block: 3rem;
+}
+
+.card__table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.card__table tr:not(:last-child) {
+    border-bottom: 1px solid var(--clr-LightGrey);
+}
+
+.card__table td {
+    padding-block: 2rem;
+    padding-inline: 3rem;
+}
+.card__table .is-bold {
+    color: var(--clr-Nutmeg, #854632);
+}
+
+@media only screen and (max-width: 375px) {
+
+    .card {
+        margin-block: 0px;
+        padding: 0px;
+    }
+
+    .card__content {
+        padding: 2rem;
+    }
+
+    .card__image {
+        margin-bottom: 0rem;
+    }
+
+    img, .card {
+        border-radius: 0rem;
+    }
 }
 
