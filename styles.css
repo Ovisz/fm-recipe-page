@@ -25,26 +25,79 @@
     --ff-Outfit: 'Outfit', sans-serif;
     --ff-Young: 'Young Serif', sans-serif;
 
-    --fs-body: 16px;
+    --fs-body: 1.6rem;
     --fw-400: 400;
     --fw-600: 600;
     --fw-700: 700;
 
 }
 
-
 *,
 *::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
+*::after {margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}  
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 body {
     font-size: var(--fs-body, 16px);
     font-family: var(--ff-Outfit, 'Arial');
+    color: var(--clr-WengeBrown, #222);
+    background-color: var(--clr-Eggshell, #f3e6d8);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
 }
+
+h1, h2, p {
+    padding: 0;
+    margin: 0;
+
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.card {
+    background: var(--clr-White, #fff);
+    width: auto;
+    height: auto;
+    max-width: 70rem;
+    padding: 5rem;
+    border-radius: 1.5rem;
+    margin: 8rem;
+    overflow: hidden;
+}
+
+.card__image {
+    height: 100%;
+    width: 100%;
+    max-height: 30rem;
+    margin-bottom: 2rem;
+}
+
+.card__heading {
+    font-family: var(--ff-Young, Serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    padding-block: 1rem;
+}
+
 
 
 @media only screen and (min-width: 375px) {
