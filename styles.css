@@ -26,7 +26,7 @@
     --ff-Young: 'Young Serif', sans-serif;
 
     --fs-body: 1.6rem;
-    --fs-h1: clamp(3rem, 4vw, 3.5rem);;
+    --fs-h1: clamp(3.5rem, 5vw, 4rem);;
     --fs-h2: clamp(2rem, 4vw, 2.8rem);
     --fw-400: 400;
     --fw-600: 600;
@@ -171,7 +171,7 @@ img {
     color: var(--clr-Nutmeg, #854632);
 }
 
-@media only screen and (max-width: 425px) {
+@media (max-width: 35em) {
 
     .card {
         margin-block: 0px;
